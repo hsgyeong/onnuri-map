@@ -1,0 +1,26 @@
+# 의존성 / 빌드 산출물
+node_modules/
+web/.next/
+web/out/
+web/build/
+
+# 환경변수 (비밀키!)
+.env
+.env.*
+!.env.local.example
+
+# Vercel
+.vercel/
+
+# 대용량 생성 데이터 (CSV 원본에서 재생성 가능)
+data/stores.json
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+*.log
+
+# 참고: 아래는 커밋함 (배포/재현에 필요)
+#  - 소상공인..._20250731.csv  (원본 공공데이터)
+#  - data/markets.json          (지오코딩 결과)
+#  - web/public/markets.json    (앱이 로드하는 정적 데이터)

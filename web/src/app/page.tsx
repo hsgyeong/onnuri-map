@@ -174,7 +174,7 @@ function Select({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       disabled={disabled}
-      className="rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-sm text-slate-800 outline-none focus:border-blue-400 disabled:bg-slate-50 disabled:text-slate-300"
+      className="rounded-lg border border-slate-200 bg-white px-2 py-1.5 text-sm text-slate-400 outline-none focus:border-blue-400 disabled:bg-slate-50 disabled:text-slate-300"
     >
       {options.map((o) => (
         <option key={o} value={o}>

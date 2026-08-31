@@ -83,7 +83,7 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
   const pickMajor = (m: string) => { setMajor(m); setSub("전체"); };
 
   return (
-    <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-[88%] flex-col rounded-t-2xl bg-white shadow-2xl sm:inset-y-0 sm:right-0 sm:left-auto sm:max-h-none sm:w-[380px] sm:rounded-none sm:rounded-l-2xl">
+    <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-[94%] flex-col rounded-t-2xl bg-white shadow-2xl sm:inset-y-0 sm:right-0 sm:left-auto sm:max-h-none sm:w-[380px] sm:rounded-none sm:rounded-l-2xl">
       {/* 모바일 드래그 핸들 */}
       <div className="mx-auto mt-2 h-1 w-10 shrink-0 rounded-full bg-slate-300 sm:hidden" />
       <div className="flex items-start justify-between border-b border-slate-100 px-4 pb-3 pt-3 sm:pt-4">

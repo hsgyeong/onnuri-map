@@ -83,8 +83,10 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
   const pickMajor = (m: string) => { setMajor(m); setSub("전체"); };
 
   return (
-    <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-[75%] flex-col rounded-t-2xl bg-white shadow-2xl sm:inset-y-0 sm:right-0 sm:left-auto sm:max-h-none sm:w-[380px] sm:rounded-none sm:rounded-l-2xl">
-      <div className="flex items-start justify-between border-b border-slate-100 p-4">
+    <div className="absolute inset-x-0 bottom-0 z-10 flex max-h-[85%] flex-col rounded-t-2xl bg-white shadow-2xl sm:inset-y-0 sm:right-0 sm:left-auto sm:max-h-none sm:w-[380px] sm:rounded-none sm:rounded-l-2xl">
+      {/* 모바일 드래그 핸들 */}
+      <div className="mx-auto mt-2 h-1 w-10 shrink-0 rounded-full bg-slate-300 sm:hidden" />
+      <div className="flex items-start justify-between border-b border-slate-100 px-4 pb-3 pt-3 sm:pt-4">
         <div>
           <h2 className="text-lg font-bold text-slate-900">{market.name}</h2>
           <p className="mt-0.5 text-sm text-slate-500">
@@ -100,8 +102,8 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
         </button>
       </div>
 
-      {/* 대분류 칩 */}
-      <div className="flex gap-1.5 overflow-x-auto border-b border-slate-100 px-3 py-2">
+      {/* 대분류 칩 (여러 줄로 감싸 모두 보이도록) */}
+      <div className="flex flex-wrap gap-1.5 border-b border-slate-100 px-3 py-2.5">
         <Chip active={major === "전체"} onClick={() => pickMajor("전체")}>
           전체 {stores.length}
         </Chip>
@@ -114,7 +116,7 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
 
       {/* 소분류 칩 (대분류 선택 시) */}
       {subsPresent.length > 0 && (
-        <div className="flex gap-1.5 overflow-x-auto border-b border-slate-100 bg-slate-50 px-3 py-2">
+        <div className="flex flex-wrap gap-1.5 border-b border-slate-100 bg-slate-50 px-3 py-2.5">
           <Chip small active={sub === "전체"} onClick={() => setSub("전체")}>
             전체
           </Chip>

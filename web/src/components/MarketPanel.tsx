@@ -177,9 +177,6 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
           </ul>
         )}
       </div>
-      <div className="border-t border-slate-100 px-4 py-2 text-xs text-slate-400">
-        {filtered.length.toLocaleString()}곳 표시 중
-      </div>
     </div>
   );
 }

@@ -131,7 +131,7 @@ export default function MarketPanel({ market, onClose, presetMajor = "전체", p
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="가게 이름·품목 검색 (예: 떡, 정육)"
-          className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-blue-400"
+          className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-800 outline-none focus:border-blue-400"
         />
         <label className="flex items-center gap-2 text-sm text-slate-600">
           <input
